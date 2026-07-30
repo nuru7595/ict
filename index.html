@@ -254,6 +254,39 @@
       color: var(--ink-soft);
     }
 
+    .done-bottom-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      margin-top: 18px;
+      padding: 13px 16px;
+      background: #e9f3ec;
+      border: 1.5px solid #bfe0cc;
+      border-radius: 12px;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease;
+      font-family: inherit;
+    }
+
+    .done-bottom-btn:hover {
+      background: #d9ecdf;
+    }
+
+    .done-bottom-btn:active {
+      transform: scale(0.98);
+    }
+
+    .done-bottom-btn.is-marked {
+      background: var(--green);
+      color: #fff;
+      border-color: var(--green);
+    }
+
     .toc-num {
       font-weight: 700;
       color: var(--maroon);
@@ -275,6 +308,7 @@
       margin-bottom: 18px;
       overflow: hidden;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      scroll-margin-top: 14px;
     }
 
     .qcard[open] {
@@ -777,7 +811,7 @@
             রাউটার কী? আইপি এড্রেস কাকে বলে? রাউটারের সুবিধা ও অসুবিধা লিখ। রাউটারের কার্যাবলি বর্ণনা কর।</span><span
             class="tag tag-normal">Normal</span></a>
         <a href="#q-16" class="toc-item" data-target="q-16" data-chapter="3"><span class="toc-text">ICT 3.9: হাইপার লিংক
-            কী? এর প্রকারভেদ এবং গুরুত্ব আলোচনা কর।</span><span class="tag tag-star">*****</span></a>
+            কী? এর প্রকারভেদ এবং গুরুত্ব আলোচনা কর।</span><span class="tag tag-supreme">Supreme</span></a>
         <a href="#q-17" class="toc-item" data-target="q-17" data-chapter="3"><span class="toc-text">ICT 3.1: ওয়ার্ড
             প্রসেসর কী? বহুল ব্যবহৃত কয়েকটি ওয়ার্ড প্রসেসিং এর নাম লেখ।</span><span
             class="tag tag-star">*****</span></a>
@@ -861,14 +895,14 @@
         <a href="#q-58" class="toc-item" data-target="q-58" data-chapter="8"><span class="toc-text">ICT 8.10:
             চ্যাটবট ও মানুষের মধ্যে পার্থক্য লেখ।</span><span class="tag tag-normal">Normal</span></a>
         <a href="#q-48" class="toc-item" data-target="q-48" data-chapter="9"><span class="toc-text">ICT 9.1: বাংলাদেশে
-            ফ্রিল্যান্সিং-এর সম্ভাবনা আলোচনা কর।</span><span class="tag tag-important">Important</span></a>
+            ফ্রিল্যান্সিং-এর সম্ভাবনা আলোচনা কর।</span><span class="tag tag-supreme">Supreme</span></a>
         <a href="#q-49" class="toc-item" data-target="q-49" data-chapter="9"><span class="toc-text">ICT 9.3:
             ফ্রিল্যান্সিং কি? ফ্রিল্যান্সিং ক্যারিয়ারের চ্যালেঞ্জসমূহ আলোচনা করো।</span><span
             class="tag tag-important">Important</span></a>
         <a href="#q-50" class="toc-item" data-target="q-50" data-chapter="9"><span class="toc-text">ICT 9.4: বাংলাদেশে
             ফ্রিল্যান্সিং-এর সমস্যা সমাধানের উপায় আলোচনা কর।</span><span class="tag tag-important">Important</span></a>
         <a href="#q-51" class="toc-item" data-target="q-51" data-chapter="9"><span class="toc-text">ICT 9.9: আপওয়ার্ক
-            কী? আপওয়ার্ক এ কীভাবে ফ্রিল্যান্সিং করা যায়?</span><span class="tag tag-important">Important</span></a>
+            কী? আপওয়ার্ক এ কীভাবে ফ্রিল্যান্সিং করা যায়?</span><span class="tag tag-star">*****</span></a>
         <a href="#q-52" class="toc-item" data-target="q-52" data-chapter="9"><span class="toc-text">ICT 9.11: একটি
             আকর্ষণীয় ফ্রিল্যান্সিং প্রোফাইল তৈরি করার ধাপ লেখ।</span><span class="tag tag-normal">Normal</span></a>
         <a href="#q-53" class="toc-item" data-target="q-53" data-chapter="9"><span class="toc-text">ICT 9.10: বাংলাদেশের
@@ -3276,7 +3310,7 @@
       <details class="qcard" id="q-16" data-chapter="3">
         <summary class="qsummary">
           <span class="qtext">ICT 3.9: হাইপার লিংক কী? এর প্রকারভেদ এবং গুরুত্ব আলোচনা কর।</span>
-          <span class="tag tag-star">*****</span>
+          <span class="tag tag-supreme">Supreme</span>
           <span class="chev">▼</span>
         </summary>
         <div class="qbody">
@@ -7730,7 +7764,7 @@
       <details class="qcard" id="q-48" data-chapter="9">
         <summary class="qsummary">
           <span class="qtext">ICT 9.1: বাংলাদেশে ফ্রিল্যান্সিং-এর সম্ভাবনা আলোচনা কর।</span>
-          <span class="tag tag-important">Important</span>
+          <span class="tag tag-supreme">Supreme</span>
           <span class="chev">▼</span>
         </summary>
         <div class="qbody">
@@ -8136,7 +8170,7 @@
       <details class="qcard" id="q-51" data-chapter="9">
         <summary class="qsummary">
           <span class="qtext">ICT 9.9: আপওয়ার্ক কী? আপওয়ার্ক এ কীভাবে ফ্রিল্যান্সিং করা যায়?</span>
-          <span class="tag tag-important">Important</span>
+          <span class="tag tag-star">*****</span>
           <span class="chev">▼</span>
         </summary>
         <div class="qbody">
@@ -8736,6 +8770,15 @@
         saveDone(doneState);
         applyVisual(id, isDone);
         updateProgress();
+        if (isDone) {
+          const card = document.getElementById(id);
+          if (card) {
+            card.open = false;
+            requestAnimationFrame(() => {
+              card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+          }
+        }
       }
 
       function applyVisual(id, isDone) {
@@ -8750,6 +8793,13 @@
         if (card) {
           const cb = card.querySelector('.qsummary .done-check');
           if (cb) cb.checked = !!isDone;
+          const btn = card.querySelector('.done-bottom-btn');
+          if (btn) {
+            btn.classList.toggle('is-marked', !!isDone);
+            btn.textContent = isDone
+              ? '✅ সম্পন্ন হয়েছে (আনমার্ক করতে ক্লিক করুন)'
+              : '✓ পড়া শেষ, সম্পন্ন হিসেবে চিহ্নিত করি';
+          }
         }
       }
 
@@ -8788,6 +8838,24 @@
           setDone(id, cb.checked);
         });
         summary.insertBefore(cb, summary.firstChild);
+      });
+
+      // Inject a "mark as done" button at the bottom of each question's body
+      allCards.forEach(card => {
+        const id = card.id;
+        const qbody = card.querySelector('.qbody');
+        if (!qbody) return;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'done-bottom-btn';
+        if (doneState[id]) btn.classList.add('is-marked');
+        btn.textContent = doneState[id]
+          ? '✅ সম্পন্ন হয়েছে (আনমার্ক করতে ক্লিক করুন)'
+          : '✓ পড়া শেষ, সম্পন্ন হিসেবে চিহ্নিত করি';
+        btn.addEventListener('click', function () {
+          setDone(id, !doneState[id]);
+        });
+        qbody.appendChild(btn);
       });
 
       // Reset button
