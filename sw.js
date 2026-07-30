@@ -1,12 +1,9 @@
-const CACHE_NAME = 'ict-notes-v1';
+const CACHE_NAME = 'ict-notes-v2';
 const FILES_TO_CACHE = [
   './',
   './index.html',
   './manifest.json'
 ];
-
-// Bump this whenever you upload a new version of index.html to GitHub,
-// so returning visitors actually get the update instead of the old cache.
 
 self.addEventListener('install', function (event) {
   self.skipWaiting();
@@ -29,7 +26,6 @@ self.addEventListener('activate', function (event) {
   self.clients.claim();
 });
 
-// Cache-first: try the network, but fall back to the cached copy when offline.
 self.addEventListener('fetch', function (event) {
   if (event.request.method !== 'GET') return;
   event.respondWith(

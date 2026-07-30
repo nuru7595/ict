@@ -22,6 +22,10 @@
 
     * {
       box-sizing: border-box;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
 
     body {
@@ -8714,7 +8718,6 @@
       });
     });
 
-    // ---- Mark as done feature ----
     (function () {
       const STORAGE_KEY = 'exam-notes-done-v1';
       const allCards = Array.from(document.querySelectorAll('.qcard'));
@@ -8732,7 +8735,7 @@
       function saveDone(state) {
         try {
           localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-        } catch (e) { /* ignore */ }
+        } catch (e) { }
       }
 
       let doneState = loadDone();
@@ -8786,7 +8789,6 @@
         }
       }
 
-      // Inject checkbox into each TOC item
       document.querySelectorAll('.toc-item').forEach(item => {
         const id = item.getAttribute('data-target');
         const cb = document.createElement('input');
@@ -8804,7 +8806,6 @@
         item.insertBefore(cb, item.firstChild);
       });
 
-      // Inject checkbox into each question card summary
       allCards.forEach(card => {
         const id = card.id;
         const summary = card.querySelector('.qsummary');
@@ -8823,7 +8824,6 @@
         summary.insertBefore(cb, summary.firstChild);
       });
 
-      // Inject a "mark as done" button at the bottom of each question's body
       allCards.forEach(card => {
         const id = card.id;
         const qbody = card.querySelector('.qbody');
@@ -8841,7 +8841,6 @@
         qbody.appendChild(btn);
       });
 
-      // Reset button
       const resetBtn = document.getElementById('resetDone');
       if (resetBtn) {
         resetBtn.addEventListener('click', function () {
@@ -8853,22 +8852,30 @@
         });
       }
 
-      // Initial paint
       allCards.forEach(card => applyVisual(card.id, !!doneState[card.id]));
       updateProgress();
     })();
   </script>
 
   <script>
-    // Offline support: once loaded, this caches the page so it opens
-    // without internet next time.
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
         navigator.serviceWorker.register('sw.js').catch(function () {
-          // Ignore silently if it can't register (e.g. opened as a local file)
         });
       });
     }
+  </script>
+
+  <script>
+    document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+    document.addEventListener('selectstart', function (e) { e.preventDefault(); });
+    document.addEventListener('copy', function (e) { e.preventDefault(); });
+    document.addEventListener('keydown', function (e) {
+      const key = e.key.toLowerCase();
+      if ((e.ctrlKey || e.metaKey) && (key === 'c' || key === 'a' || key === 'x' || key === 'u')) {
+        e.preventDefault();
+      }
+    });
   </script>
 
 </body>
