@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ict-notes-v3';
+const CACHE_NAME = 'ict-notes-v4';
 const FILES_TO_CACHE = [
   './',
   './index.html',
